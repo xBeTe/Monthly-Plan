@@ -1,0 +1,5 @@
+- 读取当月 JSON 计划文件，提取出所有带有 `start_date_planned` / `end_date_planned` 及对应实际时间的任务和子任务。
+- 将这些带有时间线属性的任务转换为符合 Mermaid Gantt 图规范语法的文本（包含 title 与 dateFormat）。
+- 调用本地工具，将这段 Mermaid 文本写入到一个暂时文件（如 `gantt_temp.mmd`）。
+- 调用命令终端脚本将其渲染为本地图片：执行命令 `python scripts/render_mermaid.py gantt_temp.mmd gantt.png`。
+- 将生成的甘特图图片以 Markdown 语法 `![当月进度甘特图](gantt.png)` 返回给用户，提供直观的可视化感受。
