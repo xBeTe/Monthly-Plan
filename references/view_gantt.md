@@ -45,7 +45,7 @@ gantt
 
 ## 步骤 4：写入临时文件并渲染
 - 调用本地工具，将拼接好的 Mermaid 文本写入临时文件 `gantt_temp.mmd`。
-- 执行渲染命令：`python scripts/render_mermaid.py gantt_temp.mmd gantt.png`。
+- 使用 Mermaid CLI 渲染成 png。
 
 ## 步骤 5：输出结果
 - 将生成的甘特图图片以 Markdown 语法返回：`![当月进度甘特图](gantt.png)`。
